@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Author;
+use App\Models\Authors;
 
 class AuthorController extends Controller
 {
     public function index()
     {
-        $data = Author::getData();
-        return view('author', compact('data'));
+        $authors = Authors::all();
+        return view('authors', compact('authors'));
     }
 }
